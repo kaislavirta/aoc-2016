@@ -2,16 +2,14 @@
 
 #include <functional>
 
-namespace {
-	struct Coord {
-		std::int32_t x;
-		std::int32_t y;
-		
-		bool operator==(const Coord& other) const {
-			return x == other.x && y == other.y;
-		}
-	};
-}
+struct Coord {
+	std::int32_t x;
+	std::int32_t y;
+	
+	bool operator==(const Coord& other) const {
+		return x == other.x && y == other.y;
+	}
+};
 
 namespace std
 {

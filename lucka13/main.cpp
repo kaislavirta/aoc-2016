@@ -1,14 +1,13 @@
 #include "MazeRunner.h"
+#include "Coord.h"
 
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
-	MazeRunner mr1(1362);
-	auto numSteps = mr1.countSteps(31, 39);
+	auto numSteps = countSteps({31, 39}, 1362);
 	std::cout << "Number of steps: " << numSteps << std::endl;
 
-	MazeRunner mr2(1362);
-	auto numVisited = mr2.fiftySteps();
+	auto numVisited = fiftySteps(1362);
 	std::cout << "Unique visits: " << numVisited << std::endl;
 
 	return EXIT_SUCCESS;
